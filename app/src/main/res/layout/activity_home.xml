@@ -1,0 +1,53 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.henryf.missingpeople.HomeActivity">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <include layout="@layout/messenger_button_send_white_round"
+                android:id="@+id/messenger_send_button"
+
+                android:layout_width="65dp"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:layout_gravity="center_vertical"
+
+                android:text="Buscar" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="120dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp" />
+
+</LinearLayout>
