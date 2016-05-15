@@ -20,12 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp">
-            <include layout="@layout/messenger_button_send_white_round"
-                android:id="@+id/messenger_send_button"
 
-                android:layout_width="65dp"
-                android:layout_margin="5dp"
-                android:layout_height="match_parent"/>
 
             <Button
                 android:layout_width="80dp"
@@ -34,7 +29,19 @@
                 android:layout_gravity="center_vertical"
 
                 android:text="Buscar" />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1"
+                android:layout_gravity="center_vertical"
 
+                android:text="SOS" />
+            <include layout="@layout/messenger_button_send_white_round"
+                android:id="@+id/messenger_send_button"
+
+                android:layout_width="65dp"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 

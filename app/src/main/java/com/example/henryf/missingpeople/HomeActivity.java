@@ -30,6 +30,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.facebook.messenger.MessengerThreadParams;
 import com.facebook.messenger.MessengerUtils;
@@ -41,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
     private PeopleAdapter adaptador;
     private static final int REQUEST_CODE_SHARE_TO_MESSENGER = 1;
     private Button search;
+    private Button sos;
     private View mMessengerButton;
     private MessengerThreadParams mThreadParams;
     private boolean mPicking;
@@ -54,8 +56,24 @@ public class HomeActivity extends AppCompatActivity {
         gridView.setAdapter(adaptador);
 
         search=(Button)findViewById(R.id.button);
+        sos=(Button)findViewById(R.id.button1);
+        sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "SOS Enviado!", Toast.LENGTH_SHORT);
+                toast1.show();
+            }
+        });
 
-
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mMessengerButton = findViewById(R.id.messenger_send_button);
 
